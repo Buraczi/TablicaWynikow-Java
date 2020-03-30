@@ -23,6 +23,22 @@ public class OdczytDanychZawodnika {
         return new Zawodnik(imieZawodnika, punktacja, poziomUkonczony);
     }
 
+    public int numerOpcji() {
+        int numerOpcji = sc.nextInt();
+        sc.nextLine();
+        return numerOpcji;
+    }
+
+    public void koniecGry() {
+        System.out.print("Gra zakonczona (true/false)? ");
+        boolean koniecGry = sc.nextBoolean();
+
+        if (!koniecGry) {
+            System.out.println("Graj dalej!");
+            System.exit(0);
+        }
+    }
+
     public void zamknijOdczytScannera() {
         sc.close();
     }
