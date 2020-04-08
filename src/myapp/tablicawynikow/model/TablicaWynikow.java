@@ -27,19 +27,24 @@ public class TablicaWynikow {
         }
     }
 
-    //sortowanie bąbelkowe TBD
-    public void wyswietlZawodnikowWTabeliPosortowane(){
-       boolean posortowane = false;
-       int zmiennaTymczasowa;
-       while (!posortowane) {
-           posortowane = true;
-           for (int i = 0; i < iloscZawodnikow; i++) {
-               if (zawodnicy[i].getSumaPunktacji() > zawodnicy[i+1].getSumaPunktacji()) {
-                   zawodnicy[i].wyswietlDaneZawodnika();
-               } else {
-                   zawodnicy[i+1].wyswietlDaneZawodnika();
-               }
-           }
-       }
+    //sortowanie bąbelkowe - funkcja
+    public void sortowanieTablicyWynikow(){
+        boolean posortowane = false;
+        Zawodnik zawodnikTymczasowy;
+        while (!posortowane) {
+            posortowane = true;
+            for (int i = 0; i < iloscZawodnikow-1; i++) {
+                if (zawodnicy[i].getSumaPunktacji() < zawodnicy[i+1].getSumaPunktacji()) {
+                    zawodnikTymczasowy = zawodnicy[i];
+                    zawodnicy[i] = zawodnicy[i+1];
+                    zawodnicy[i+1] = zawodnikTymczasowy;
+                    posortowane = false;
+                }
+            }
+        }
+    }
+
+    public int getIloscZawodnikow() {
+        return iloscZawodnikow;
     }
 }

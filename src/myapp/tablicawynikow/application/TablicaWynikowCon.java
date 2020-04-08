@@ -46,12 +46,11 @@ public class TablicaWynikowCon {
     private void dodajZawodnika() {
         Zawodnik zawodnik = odz.pobierzDaneZawodnika();
         tablicaWynikow.dodajZawodnika(zawodnik);
-
     }
 
     private void wyswietlTabliceWynikow() {
-//        tablicaWynikow.wyswietlZawodnikowWTabeli();
-        tablicaWynikow.wyswietlZawodnikowWTabeliPosortowane();
+        tablicaWynikow.sortowanieTablicyWynikow();
+        tablicaWynikow.wyswietlZawodnikowWTabeli();
     }
 
     private void wyjscieZProgramu() {

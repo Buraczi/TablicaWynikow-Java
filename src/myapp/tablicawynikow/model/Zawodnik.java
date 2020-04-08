@@ -15,7 +15,7 @@ public class Zawodnik {
         this.imieZawodnika = imieZawodnika;
         this.punktacja = punktacja;
         this.poziomUkonczony = poziomUkonczony;
-        this.sumaPunktacji = punktacja + poziomUkonczony * BONUS; //100 to bonus
+        this.sumaPunktacji = punktacja + poziomUkonczony * BONUS;
     }
 
     public void wyswietlDaneZawodnika() {
